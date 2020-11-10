@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/newFicha"
+            android:title="Ficha nueva"/>
+        <item
+            android:id="@+id/seeFicha"
+            android:title="Ver todas las fichas" />
+        <item
+            android:id="@+id/vehiculoAct"
+            android:title="Vehiculos actuales"/>
+    </group>
+
+    <group
+        android:id="@+id/group_2"
+        android:checkableBehavior="single">
+        <item
+            android:title="Cerrar sesión"
+            android:id="@+id/logout"/>
+    </group>
+
+</menu>
