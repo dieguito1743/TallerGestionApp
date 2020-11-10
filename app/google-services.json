@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "801072871689",
+    "firebase_url": "https://fichaentradatallerapp.firebaseio.com",
+    "project_id": "fichaentradatallerapp",
+    "storage_bucket": "fichaentradatallerapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801072871689:android:b6a3f88b7faaddb2c17bd8",
+        "android_client_info": {
+          "package_name": "com.buildingdreamcars.tallergestionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801072871689-av34tbb0qsr0jiols5r43uvf174qnigj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdamLtpsLXS2SBzttDC6z0mPillFjKqV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801072871689-av34tbb0qsr0jiols5r43uvf174qnigj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

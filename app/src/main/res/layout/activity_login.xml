@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Por favor inicie sesion para comenzar"
+        android:textSize="25sp"
+        android:id="@+id/tv_txt_login"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_txt_login"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Correo: "
+        android:id="@+id/tv_mail"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mail"
+        android:id="@+id/et_mail"
+        android:inputType="textEmailAddress"
+        android:hint="ejemplo@ejemplo.com"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_mail"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="Contraseña: "
+        android:id="@+id/tv_pass"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_pass"
+        android:id="@+id/et_pass"
+        android:inputType="textPassword"
+        android:hint="Contraseña"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_login"
+        android:text="Iniciar sesión"
+        android:layout_below="@id/et_pass"
+        android:textSize="25sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_Registro"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:id="@+id/tv_sign_in"
+        android:layout_below="@id/btn_login"/>
+
+</RelativeLayout>

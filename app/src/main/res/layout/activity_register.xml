@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_nombre"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Nombre del taller:"/>
+    <EditText
+        android:layout_below="@+id/tv_nombre"
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Correo electrónico"
+        android:id="@+id/tv_mail"
+        android:layout_below="@id/et_nombre"/>
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mail"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/et_confirmmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Repite el email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/et_mail"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contraseña:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_pass"
+        android:layout_below="@id/et_confirmmail"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_pass"
+        android:hint="Password"
+        android:layout_below="@+id/tv_pass"
+        android:inputType="textPassword"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_confirmpass"
+        android:hint="Repite la contraseña"
+        android:layout_below="@+id/et_pass"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_confirmpass"
+        android:text="Registrarme"
+        android:textSize="20sp"
+        android:id="@+id/btn_regis"
+        />
+
+</RelativeLayout>

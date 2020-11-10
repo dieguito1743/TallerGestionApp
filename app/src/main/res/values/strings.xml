@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TallerGestionApp</string>
+    <string name="txt_Registro">Si no tiene cuenta <u>haga clic aquí</u></string>
+</resources>
