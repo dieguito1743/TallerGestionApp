@@ -9,15 +9,18 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.buildingdreamcars.tallergestionapp.R;
@@ -35,6 +38,9 @@ public class EstadoActivity extends AppCompatActivity {
     public static Path mPath = new Path();
     public static Paint paint_brush = new Paint();
     private Bitmap mBitmap;
+    private Canvas mCanvas;
+
+    private static ImageView imageView;
 
     Button btnsave, btndelete;
 
@@ -49,8 +55,30 @@ public class EstadoActivity extends AppCompatActivity {
         int alto = medidas.heightPixels;
         getWindow().setLayout(ancho = 1000, alto = 1750);
 
-        paint_brush.setColor(Color.BLACK);
-        mBitmap = Bitmap.createBitmap(ancho, alto, Bitmap.Config.ARGB_8888);
+        paint_brush.setColor(Color.RED);
+
+        // **pasos
+        // 1 cargar la imagen en el bitmap
+        // 2 inicializar el canvas con el bitmap pre cargado que tiene la iamgen de fondo.
+        // 3 guardar lo "dibujado" en en el bitmap y copiarlo en el bitmap
+
+        // uso un ImageView para obtener el bitmap, tu puedes hacerlo directamente, solo que no recuerdo como.
+        // esta para que lo googlees.
+        if(imageView == null) {
+            // no quiero estar instanciado multiples ImageView, por eso hago esto.
+            imageView = new ImageView(this);
+        }
+        // le pongo oculta, no quiero que por alguna razón se valla a ver.
+        imageView.setVisibility(View.INVISIBLE);
+        imageView.setImageResource(R.drawable.esquema_coche);
+        // este códigodel image view no aporta nada, como tedigo puedes cargar la imagen el bitmap de otra manera, como leyendo los bytes.
+
+        // acá inicializabas tu bitmap, pero no tenía nada, era un fondo en "negro"
+        // mBitmap = Bitmap.createBitmap(ancho, alto, Bitmap.Config.RGB_565);
+        BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
+        mBitmap = drawable.getBitmap().copy(Bitmap.Config.RGB_565, true);
+        mBitmap = Bitmap.createScaledBitmap(mBitmap, ancho, alto, false); // AJUSTA LA DIMENSIÓN DEL DRAW y LA IMG de FONDO.!!
+        mCanvas = new Canvas(mBitmap);
 
 
         btnsave = findViewById(R.id.btn_guardar_estado);
@@ -106,6 +134,11 @@ public class EstadoActivity extends AppCompatActivity {
         try {
             FileOutputStream fileOutputStream;
             fileOutputStream = new FileOutputStream(image);
+
+            // copio lo que dibuje en el canvas, que tiene el canvas?  tiene el fondo de los carros, recuerda que hicimos esto en
+            // en el constructor
+            mCanvas.drawBitmap(mBitmap, 0, 0, paint_brush);
+            mCanvas.drawPath(mPath, paint_brush);
 
             mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
             fileOutputStream.flush();
