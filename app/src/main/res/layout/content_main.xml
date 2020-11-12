@@ -3,16 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/content_main"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
     <TextView
         android:id="@+id/txtwelcome"
         android:layout_width="match_parent"
@@ -20,4 +13,22 @@
         android:textSize="25sp"
         android:layout_below="@+id/toolbar"
         android:gravity="center"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear una nueva ficha"
+        android:layout_below="@id/txtwelcome"
+        android:id="@+id/btn_iracrearfic"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver las fichas de entrada"
+        android:layout_below="@id/btn_iracrearfic"
+        android:id="@+id/btn_vertodaslasfi"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver los vehiculos del garage"
+        android:layout_below="@id/btn_vertodaslasfi"
+        android:id="@+id/btn_vercochesgarage"/>
 </RelativeLayout>

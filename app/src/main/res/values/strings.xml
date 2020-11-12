@@ -3,4 +3,14 @@
     <string name="txt_Registro">Si no tiene cuenta <u>haga clic aquí</u></string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="deposito">
+        <item>Seleccione una cantidad</item>
+        <item>0</item>
+        <item>1/4</item>
+        <item>1/2</item>
+        <item>3/4</item>
+        <item>1</item>
+    </string-array>
 </resources>

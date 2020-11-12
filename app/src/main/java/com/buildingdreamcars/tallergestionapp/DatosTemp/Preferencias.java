@@ -22,7 +22,7 @@ public class Preferencias {
         SharedPreferences settings = context.getSharedPreferences(PREFS_KEY, context.MODE_PRIVATE);
         SharedPreferences.Editor editor;
         editor = settings.edit();
-        editor.putString("Nickname","Usuario: "+nombre);
+        editor.putString("Nickname",nombre);
         editor.apply();
     }
     public static String getNickname (Context context){

@@ -7,11 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".Activities.MainActivity"
     android:id="@+id/drawer_main">
-    <include
-        android:layout_height="match_parent"
+    <RelativeLayout
         android:layout_width="match_parent"
-        layout="@layout/content_main"/>
-
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+        <include
+            android:layout_below="@+id/toolbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            layout="@layout/content_main"/>
+    </RelativeLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

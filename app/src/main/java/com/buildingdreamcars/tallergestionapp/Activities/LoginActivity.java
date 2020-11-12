@@ -52,6 +52,10 @@ public class LoginActivity extends AppCompatActivity {
             et_mail.setText(email);
             et_pass.setText(pass);
         }
+        if(Preferencias.getLoged(getApplicationContext())){
+            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+            startActivity(intent);
+        }
         mAuth=FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
