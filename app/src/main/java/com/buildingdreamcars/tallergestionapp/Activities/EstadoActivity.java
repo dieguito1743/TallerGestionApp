@@ -3,12 +3,10 @@ package com.buildingdreamcars.tallergestionapp.Activities;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -16,7 +14,6 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -24,14 +21,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.buildingdreamcars.tallergestionapp.R;
-import com.buildingdreamcars.tallergestionapp.Utiles.display;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.buildingdreamcars.tallergestionapp.Utiles.display.pathList;
 
